@@ -1,36 +1,16 @@
 ---
 import { Icon } from "astro-icon/components";
 
-/** 
-	Uses https://www.astroicon.dev/getting-started/
-	Find icons via guide: https://www.astroicon.dev/guides/customization/#open-source-icon-sets
-	Only installed pack is: @iconify-json/mdi
-*/
-const socialLinks: {
-	friendlyName: string;
-	isWebmention?: boolean;
-	link: string;
-	name: string;
-}[] = [
+const socialLinks = [
 	{
-		friendlyName: "Github",
+		friendlyName: "GitHub",
 		link: "https://github.com/kaiiress",
 		name: "mdi:github",
 	},
 	{
-		friendlyName: "Steam",
-		link: "https://steamcommunity.com/id/kaiiress/",
-		name: "mdi:steam",
-	},
-	{
-		friendlyName: "Twitch",
-		link: "https://www.twitch.tv/kaiiress",
-		name: "mdi:twitch",
-	},
-	{
-		friendlyName: "YouTube",
-		link: "https://www.youtube.com/@kaiiress",
-		name: "mdi:youtube",
+		friendlyName: "Twitter",
+		link: "https://twitter.com/realjaydenr",
+		name: "mdi:twitter",
 	},
 	{
 		friendlyName: "TikTok",
@@ -49,12 +29,12 @@ const socialLinks: {
 	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
-			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
+			socialLinks.map(({ friendlyName, link, name }) => (
 				<li class="flex">
-					
+					<a
 						class="hover:text-link inline-block"
 						href={link}
-						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
+						rel="noreferrer"
 						target="_blank"
 					>
 						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
