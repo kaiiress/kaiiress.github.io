@@ -15,7 +15,7 @@ const socialLinks = [
 	{
 		friendlyName: "TikTok",
 		link: "https://www.tiktok.com/@realjaydenr",
-		name: "mdi:tiktok",
+		name: "simple-icons:tiktok",
 	},
 	{
 		friendlyName: "Discord",
@@ -35,10 +35,9 @@ const socialLinks = [
 						class="hover:text-link inline-block"
 						href={link}
 						rel="noreferrer"
-						target="_blank"
+						aria-label={friendlyName}
 					>
-						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
-						<span class="sr-only">{friendlyName}</span>
+						<Icon name={name} />
 					</a>
 				</li>
 			))
