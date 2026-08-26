@@ -14,8 +14,33 @@ const socialLinks: {
 }[] = [
 	{
 		friendlyName: "Github",
-		link: "https://github.com/chrismwilliams/astro-cactus",
+		link: "https://github.com/kaiiress",
 		name: "mdi:github",
+	},
+	{
+		friendlyName: "Steam",
+		link: "https://steamcommunity.com/id/kaiiress/",
+		name: "mdi:steam",
+	},
+	{
+		friendlyName: "Twitch",
+		link: "https://www.twitch.tv/kaiiress",
+		name: "mdi:twitch",
+	},
+	{
+		friendlyName: "YouTube",
+		link: "https://www.youtube.com/@kaiiress",
+		name: "mdi:youtube",
+	},
+	{
+		friendlyName: "TikTok",
+		link: "https://www.tiktok.com/@realjaydenr",
+		name: "mdi:tiktok",
+	},
+	{
+		friendlyName: "Discord",
+		link: "https://discord.com/users/1412637333462847598",
+		name: "mdi:discord",
 	},
 ];
 ---
@@ -26,7 +51,7 @@ const socialLinks: {
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
 				<li class="flex">
-					<a
+					
 						class="hover:text-link inline-block"
 						href={link}
 						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
