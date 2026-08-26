@@ -1,3 +1,7 @@
+packages:
+  - "."
 allowBuilds:
-  esbuild: set this to true or false
-  sharp: set this to true or false
+  "@biomejs/biome": true
+  "@tailwindcss/oxide": true
+  esbuild: true
+  sharp: true
